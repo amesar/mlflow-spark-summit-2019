@@ -9,3 +9,4 @@ Examples:
 * [sklearn](sklearn)
 * [pyspark](pyspark)
 * [scala_spark](scala_spark)
+* [search](search) - Show new [MLflow 0.9.1 Search](https://mlflow.org/docs/latest/search-syntax.html) feature.
