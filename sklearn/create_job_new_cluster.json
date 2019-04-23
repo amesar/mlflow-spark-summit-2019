@@ -1,0 +1,22 @@
+{
+  "name": "MLflow_RunNow_NewCluster",
+  "new_cluster": {
+    "spark_version": "5.3.x-scala2.11",
+    "node_type_id": "i3.xlarge",
+    "num_workers": 1
+  },
+  "email_notifications": {
+    "on_start": ["myname@mycompany.com"],
+    "on_success": ["myname@mycompany.com"],
+    "on_failure": ["myname@mycompany.com"]
+  },
+  "libraries": [
+    { "pypi": { "package": "mlflow" } },
+    { "pypi": { "package": "cloudpickle" }},
+    { "egg": "dbfs:/tmp/jobs/wine_quality/mlflow_wine_quality-0.0.1-py3.6.egg" }
+  ],
+  "spark_python_task": {
+    "python_file": "dbfs:/tmp/jobs/wine_quality/main_train_wine_quality.py"
+  },
+  "timeout_seconds": 3600
+}

@@ -1,0 +1,11 @@
+name: mlflow-demo-sklearn
+channels:
+- conda-forge
+dependencies:
+- python=3.6
+- pip:
+    - mlflow==0.9.1
+    - scikit-learn==0.19.1
+    - numpy==1.14.5
+    - scipy==1.1.0
+    - matplotlib==2.2.2
