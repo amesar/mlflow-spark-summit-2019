@@ -1,0 +1,7 @@
+name: mlflow-demo-pyspark
+channels:
+- conda-forge
+dependencies:
+- python=3.6
+- pip:
+    - mlflow==0.9.1
