@@ -1,5 +1,5 @@
 
-import os,sys
+import sys
 import mlflow
 import mlflow.spark as mlflow_spark
 from pyspark.sql import SparkSession
@@ -12,8 +12,7 @@ if __name__ == "__main__":
     print("run_id:",run_id)
     spark = SparkSession.builder.appName("Predict").getOrCreate()
 
-    dir = str(os.environ['SPARK_HOME'])
-    data_path = os.path.join(dir,"data/mllib/sample_libsvm_data.txt")
+    data_path = "../data/sample_libsvm_data.txt"
     print("data_path:",data_path)
     data = spark.read.format("libsvm").load(data_path)
 
