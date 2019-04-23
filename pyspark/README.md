@@ -1,4 +1,4 @@
-# mlflow-fun - PySpark example
+# mlflow-spark-summit-2019 - pysparl
 
 ## Overview
 

@@ -1,5 +1,5 @@
 
-# mlflow-fun - Hello World
+# mlflow-spark-summit-2019 - Hello World
 
 Simple Hello World that demonstrates the different ways to run an MLflow experiment.
 

@@ -1,8 +1,8 @@
-# mlflow-fun - Spark Scala Example
+# mlflow-spark-summit-2019 - scala-spark
 
 Scala examples using the MLflow Java client:
-* Hello World - Simple MLflow example.
-* Spark ML DecisionTree - advanced - saves and predicts SparkML and MLeap model formats.
+* Hello World - Simple MLflow example with no training.
+* Spark ML DecisionTree - saves and predicts SparkML and MLeap model formats.
 
 ## Build
 ```
