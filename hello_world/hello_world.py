@@ -39,10 +39,11 @@ def run(alpha, run_origin, log_artifact):
         tags = [ RunTag("t1","hi1"), RunTag("t2","hi2") ]
         client.log_batch(run.info.run_uuid, metrics, params, tags)
 
+import sys
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--alpha", dest="alpha", help="alpha", default=0.1, type=float )
     parser.add_argument("--run_origin", dest="run_origin", help="run_origin", default="")
-    parser.add_argument("--log_artifact", dest="log_artifact", help="Log artifact", type=bool, default=False)
+    parser.add_argument("--log_artifact", dest="log_artifact", help="Log artifact", type=str, default="False")
     args = parser.parse_args()
-    run(args.alpha,args.run_origin,args.log_artifact)
+    run(args.alpha,args.run_origin,args.log_artifact=="True")
