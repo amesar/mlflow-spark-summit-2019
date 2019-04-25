@@ -25,8 +25,9 @@ export MLFLOW_TRACKING_URI=http://localhost:5000
 ```
 
 * [hello_world](hello_world) - Hello World
-* [sklearn](sklearn) - Scikit learn
-* [pyspark](pyspark) - PySpark
-* [scala_spark](scala_spark) - Scala Spark ML example using the Java client
+* [sklearn](sklearn) - Scikit learn model
+* [pyspark](pyspark) - PySpark model
+* [scala_spark](scala_spark) - Scala Spark ML model using the Java client
 * [search](search) - Shows new [MLflow 0.9.1 Search](https://mlflow.org/docs/latest/search-syntax.html) feature
-* [dump](dump) - Shows usage of mlflow.tracking package
+* [dump](dump) - Shows usage of some [mlflow.tracking](https://mlflow.org/docs/latest/python_api/mlflow.tracking.html) package methods
+* [best_run](best_run) - Finds the best model run
