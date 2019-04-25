@@ -1,0 +1,64 @@
+MLflow Version: 0.9.1
+Options:
+  exp_id_or_name: 2
+  artifact_max_level: 5
+  show_runs: True
+experiment_id: 2
+Experiment Details:
+  experiment_id: 2
+  name: sklearn
+  artifact_location: /opt/mlflow-server/mlruns/2
+  lifecycle_stage: active
+  #runs: 1
+Run 65b9e6f331da452a9ec0ff57fbfc26a1
+  run_uuid: 65b9e6f331da452a9ec0ff57fbfc26a1
+  experiment_id: 2
+  name: 
+  source_type: 4
+  source_name: train.py
+  entry_point_name: 
+  user_id: andre
+  status: 3
+  start_time: 1556210939387
+  end_time: 1556210940662
+  source_version: 4d756b3812204510ffea2ff8d5af15e8e9cbe06e
+  lifecycle_stage: active
+  artifact_uri: /opt/mlflow-server/mlruns/2/65b9e6f331da452a9ec0ff57fbfc26a1/artifacts
+  Params:
+    alpha: 1.0
+    l1_ratio: 0.5
+  Metrics:
+    mae: 0.6481010264813273  - timestamp: 1556210939 1970-01-19 00:16:50
+    r2: 0.04618821720476163  - timestamp: 1556210939 1970-01-19 00:16:50
+    rmse: 0.8593526200510287  - timestamp: 1556210939 1970-01-19 00:16:50
+  Tags:
+    data_path: data/wine-quality-white.csv
+    exp_id: 2
+    exp_name: sklearn
+    mlflow.source.git.commit: 4d756b3812204510ffea2ff8d5af15e8e9cbe06e
+    mlflow.source.name: train.py
+    mlflow.source.type: LOCAL
+    platform: Darwin
+    run_origin: demo/egg/train.sh
+  Artifacts:
+    Artifact - level 1:
+      path: model
+      is_dir: True
+      bytes: None
+      Artifact - level 2:
+        path: model/MLmodel
+        is_dir: False
+        bytes: 344
+      Artifact - level 2:
+        path: model/conda.yaml
+        is_dir: False
+        bytes: 120
+      Artifact - level 2:
+        path: model/model.pkl
+        is_dir: False
+        bytes: 673
+    Artifact - level 1:
+      path: wine_ElasticNet-paths.png
+      is_dir: False
+      bytes: 27773
+#runs: 1
