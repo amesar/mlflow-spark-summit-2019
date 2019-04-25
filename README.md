@@ -18,14 +18,15 @@ source mlflow_server/bin/activate
 mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri $PWD/mlruns --default-artifact-root $PWD/mlruns
 ```
 
-Before running an experiment
+## Examples
+Before running an experiment:
 ```
 export MLFLOW_TRACKING_URI=http://localhost:5000
 ```
 
-## Examples
-* [hello_world](hello_world)
-* [sklearn](sklearn)
-* [pyspark](pyspark)
-* [scala_spark](scala_spark)
-* [search](search) - Shows new [MLflow 0.9.1 Search](https://mlflow.org/docs/latest/search-syntax.html) feature.
+* [hello_world](hello_world) - Hello World
+* [sklearn](sklearn) - Scikit learn
+* [pyspark](pyspark) - PySpark
+* [scala_spark](scala_spark) - Scala Spark ML example using the Java client
+* [search](search) - Shows new [MLflow 0.9.1 Search](https://mlflow.org/docs/latest/search-syntax.html) feature
+* [dump](dump) - Shows usage of mlflow.tracking package
