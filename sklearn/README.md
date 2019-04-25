@@ -1,4 +1,4 @@
-# mlflow-fun - scikit-learn - Wine Quality Example
+# mlflow-spark-summit-2019 - sklearn 
 
 ## Overview
 * Wine Quality Elastic Net Example
@@ -48,14 +48,14 @@ Note that mlflow run ignores the `set_experiment()` function so you must specify
 
 **mlflow run local**
 ```
-mlflow run . -P alpha=0.01 -P l1_ratio=0.75 -P run_origin=LocalRun --experiment-id=2019
+mlflow run . -P alpha=0.01 -P l1_ratio=0.75 -P run_origin=LocalRun --experiment-id=2
 ```
 
 **mlflow run github**
 ```
 mlflow run https://github.com/amesar/mlflow-fun.git#examples/scikit-learn/wine-quality \
   -P alpha=0.01 -P l1_ratio=0.75 -P run_origin=GitRun \
-  --experiment-id=2019
+  --experiment-id=2
 ```
 
 **mlflow run Databricks remote** - Run against Databricks. 
