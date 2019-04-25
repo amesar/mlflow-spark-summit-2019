@@ -13,7 +13,7 @@ mvn clean package
 ### Run
 ```
 spark-submit --master local[2] \
-  --class org.andre.mlflow.examples.HelloWorld \
+  --class org.andre.mlflow.examples.hello.HelloWorld \
   target/mlflow-spark-examples-1.0-SNAPSHOT.jar \
   http://localhost:5000
 ```
@@ -24,7 +24,7 @@ Run ID: 81cc7941adae4860899ad5449df52802
 ```
 
 ### Source
-Source snippet from [HelloWorld.scala](src/main/scala/org/andre/mlflow/examples/HelloWorld.scala).
+Source snippet from [HelloWorld.scala](src/main/scala/org/andre/mlflow/examples/hello/HelloWorld.scala).
 ```
 // Create client
 val trackingUri = args(0)
@@ -125,7 +125,7 @@ spark-submit --master local[2] \
 
 ```
 spark-submit --master local[2] \
-  --class org.andre.mlflow.examples.TrainDecisionTree \
+  --class org.andre.mlflow.examples.decisiontree.TrainDecisionTree \
   target/mlflow-spark-examples-1.0-SNAPSHOT.jar \
   --trackingUri https://acme.cloud.databricks.com --token MY_TOKEN \
   --experimentName spark_DecisionTree \
@@ -159,7 +159,7 @@ Here is a snippet from
     { "jar": "dbfs:/tmp/jobs/spark-scala-example/mlflow-spark-examples-1.0-SNAPSHOT.jar" }
   ],
   "spark_jar_task": {
-    "main_class_name": "org.andre.mlflow.examples.TrainDecisionTree",
+    "main_class_name": "org.andre.mlflow.examples.decisiontree.TrainDecisionTree",
     "parameters": [ 
       "--dataPath",  "dbfs:/tmp/jobs/spark-scala-example/sample_libsvm_data.txt",
       "--modelPath", "/dbfs/tmp/jobs/spark-scala-example/models",
@@ -195,7 +195,7 @@ curl -X POST -H "Authorization: Bearer MY_TOKEN" \
 
 Create a notebook with the following cell. Attach it to the existing cluster described above.
 ```
-import org.andre.mlflow.examples.TrainDecisionTree
+import org.andre.mlflow.examples.decisiontree.TrainDecisionTree
 val dataPath = "dbfs:/tmp/jobs/spark-scala-example/sample_libsvm_data.txt"
 val modelPath = "/dbfs/tmp/jobs/spark-scala-example/models"
 val runOrigin = "run_from_jar_Notebook"

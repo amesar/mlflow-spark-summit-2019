@@ -1,12 +1,12 @@
 
-# mlflow-spark-summit-2019 - Hello World
+# mlflow-spark-summit-2019 - hello_world
 
 Simple Hello World that demonstrates the different ways to run an MLflow experiment.
 
 For details see [MLflow documentation - Running Projects](https://mlflow.org/docs/latest/projects.html#running-projects).
 
 Synopsis of [hello_world.py](hello_world.py):
-* Creates an experiment HelloWorld if it does not exist. You can optionally override with the standard MLFLOW_EXPERIMENT_NAME environment variable.
+* Creates an experiment HelloWorld if it does not exist. 
 * Logs parameters, metrics and tags.
 * Batch loggging of parameters, metrics and tags.
 * No ML training.

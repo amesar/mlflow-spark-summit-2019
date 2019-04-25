@@ -9,14 +9,6 @@
 * Shows several ways to run prediction  - web server,  mlflow.load_model(), UDF, etc.
 * Data: data/wine-quality-white.csv and data/predict wine-quality-red.csv.
 
-## Setup
-
-```
-pip install mlflow
-pip install matplotlib
-pip install pyarrow # for Spark UDF example
-```
-
 ## Training
 
 Source: [main.py](main.py) and [train.py](wine_quality/train.py).
@@ -27,7 +19,7 @@ Source: [main.py](main.py) and [train.py](wine_quality/train.py).
 
 To run with standard main function:
 ```
-python main.py --experiment_name WineQualityExperiment \
+python main.py --experiment_name sklearn \
   --data_path data/wine-quality-white.csv \
   --alpha 0.5 --l1_ratio 0.5
 ```
@@ -40,7 +32,6 @@ jupyter notebook
 ```
 
 ### Using mlflow run
-
 
 These runs use the [MLproject](MLproject) file. For more details see [MLflow documentation - Running Projects](https://mlflow.org/docs/latest/projects.html#running-projects).
 
@@ -276,16 +267,4 @@ df = df.drop("quality")
 udf = mlflow.pyfunc.spark_udf(spark, "model", run_id="7e674524514846799310c41f10d6b99d")
 df2 = df.withColumn("prediction", udf(*df.columns))
 df2.show(10)
-```
-
-### 5. Unpickle model artifact file without MLflow and predict
-You can directly read the model pickle file and then make predictions.
-From [pickle_predict.py](pickle_predict.py):
-```
-pickle_path = "/opt/mlflow/mlruns/3/11df004981b443908d9286d54d24dc27/artifacts/model/model.pkl"
-with open(pickle_path, 'rb') as f:
-    model = pickle.load(f)
-df = pd.read_csv("data/wine-quality-red.csv")
-predicted = model.predict(df)
-print("predicted:",predicted)
 ```

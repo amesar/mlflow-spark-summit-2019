@@ -1,16 +1,10 @@
-# mlflow-spark-summit-2019 - pysparl
+# mlflow-spark-summit-2019 - pyspark
 
 ## Overview
 
-* Source: [train.py](train.py) and [predict.py](predict.py).
-* Default experiment name: `py/spark/DecisionTree`
-  * You can overwrite the experiment name with the environment variable MLFLOW_EXPERIMENT_NAME.
-
-## Setup
-
-* Install Spark on your machine.
-* pip install mlflow
-
+* PySpark Decision Tree Classification example
+* Source: [train.py](train.py) and [predict.py](predict.py)
+* Experiment name: pypark
 
 ## Train
 
