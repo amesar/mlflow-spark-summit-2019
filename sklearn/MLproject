@@ -10,7 +10,7 @@ entry_points:
       alpha: float
       l1_ratio: {type: float, default: 0.1}
       run_origin: {type: string, default: "default" }
-    command: "python main_train_wine_quality.py 
+    command: "python main.py 
                 --experiment_name {experiment_name} 
                 --data_path {data_path} 
                 --alpha {alpha} 
